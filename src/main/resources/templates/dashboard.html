@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dashboard</title>
+</head>
+<body>
+
+<form action="listProducts" method="get">    
+<table>      
+<tr>    
+<td></td>    
+<td><input type="submit" value="Products List"></input></td>    
+</tr>    
+</table>    
+</form>
+
+
+<form th:action="@{/listProductsByCategory}" method="post">    
+<table>      
+<tr>    
+<td></td>    
+<td><label for="category">Get Products by Category</label></td>    
+<td><select th:name="category">
+        <option value="Grocery">Grocery</option>
+        <option value="Electronics">Electronics</option>
+    </select></td>
+<td><input type="submit" value="Submit"></input></td>  
+</tr>    
+</table>    
+</form>
+
+
+<form action="listUsers" method="get">    
+<table>      
+<tr>    
+<td></td>    
+<td><input type="submit" value="Users List"></input></td>    
+</tr>    
+</table>    
+</form>
+
+
+<form th:action="@{/searchUser}" method="post">    
+<table>      
+<tr>    
+<td></td>    
+<td><label for="user">Search User</label></td>    
+<td><input type="text" th:name="user"></input></td>
+<td><input type="submit" value="Submit"></input></td>  
+</tr>    
+</table>    
+</form>
+
+
+<form action="purchaseReportList" method="get">    
+<table>      
+<tr>    
+<td></td>    
+<td><input type="submit" value="Purchase Report"></input></td>    
+</tr>    
+</table>    
+</form>
+
+<form action="ascending" method="get">    
+<table>      
+<tr>    
+<td></td>    
+<td><input type="submit" value="Purchase Report in ascending order"></input></td>    
+</tr>    
+</table>    
+</form>
+
+
+<form action="descending" method="get">    
+<table>      
+<tr>    
+<td></td>    
+<td><input type="submit" value="Purchase Report in descending order"></input></td>    
+</tr>    
+</table>    
+</form>
+
+</body>
+</html>
